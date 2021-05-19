@@ -1,36 +1,56 @@
-import React from 'react';
 import './App.css';
-import { Row, Col, Container } from 'react-bootstrap';
-import ListGame from './components/ListGame';
-import Konten from './components/Konten';
-import NavbarComponents from './components/NavbarComponents';
-import Sidebar from './components/Sidebar';
+import { Row, Col } from 'react-bootstrap';
+import { Konten, NavbarComponents, Sidebar, Keterangan } from './components'
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { useState } from 'react';
+import React, { Component } from 'react'
+import { API_URL } from './utils/constant';
+import axios from 'axios';
 
-function App() {
-  const [ showNav, setShowNav] = useState(false)
-  return (
-    <div className='App'>
-      <navbar><NavbarComponents /></navbar>
-      <header>
-        <GiHamburgerMenu onClick={() => setShowNav(!showNav)}/>
-      </header>
-      <Sidebar show={showNav}/>
-      
+export default class App extends Component {
+  constructor(props) {
+    super(props);
 
-      <div className="mt-3">
-        <Container fluid>
-          <Row>
-            <Col>
-              <h4><strong>List Game</strong></h4>
-            </Col>
-            <Konten />
-          </Row>
-        </Container>
+    this.state = {
+      showNav: false,
+      menus: [],
+    };
+  }
+
+  componentDidMount() {
+    axios
+      .get(API_URL + "konten")
+      .then(res => {
+        const keterangan = res.data;
+        this.setState({ keterangan });
+      })
+      .catch(error => {
+        console.log("error lul", error);
+      })
+  }
+
+  render() {
+    const { keterangan } = this.state;
+    console.log(this.state.keterangan);
+    return (
+      <div className='App'>
+        <navbar><NavbarComponents /></navbar>
+        <header>
+          <GiHamburgerMenu onClick={() => this.setState({ showNav: !this.state.showNav })} />
+        </header>
+        <Sidebar show={this.state.showNav} />
+        <div className="mt-3">
+          <Konten show={this.state.showNav} />
+            {keterangan && keterangan.map((keterangan) => (
+              <div className="list">
+                <Keterangan 
+                  key={keterangan.id}
+                  keterangan={keterangan}
+                />
+                <br />
+              </div>
+            ))}
+        </div>
       </div>
-      </div>
-  );
+    )
+  }
 }
-
-export default App;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Sidebar = ({show}) => {
-    return ([
+    return (
             <div className={show ? 'sidenav active' : 'sidenav'}>
                 <ul>
                     <li>
@@ -16,7 +16,6 @@ const Sidebar = ({show}) => {
                 </ul>
             
         </div>
-    ]
     )
 }
 

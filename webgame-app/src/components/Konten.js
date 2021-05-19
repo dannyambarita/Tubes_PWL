@@ -1,13 +1,12 @@
-import React, {Component} from 'react';
-import { Col } from 'react-bootstrap';
-
-export default class Konten extends Component {
-    render() {
+import React from 'react';
+ 
+        const Konten = ({show}) => {
         return (
-            <Col md={2} mt="2">
-                <strong>Games</strong>
+            <div className={show ? 'konten active' : 'konten'}>
+                <h1><strong>Artikel</strong></h1>
                 <hr />
-            </Col>
+            </div>
         );
-    }
-}
+        }
+
+    export default Konten

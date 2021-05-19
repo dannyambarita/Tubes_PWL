@@ -54,13 +54,13 @@ header {
 
 .navbar {
   float: right;
-  padding-right: 62%;
+  padding-right: 50%;
 }
 
 .sidenav {
-  width : 150px;
+  width : 250px;
   background : rgb(42, 30, 150);
-  position: absolute;
+  position: fixed;
   height: 100%;
   left: -100%;
   transition: all 1s;
@@ -98,3 +98,25 @@ header svg {
   font-size: 30px;
 }
 
+.konten {
+  left: -100%;
+  transition: all 1s;
+}
+
+.konten.active {
+  left: 0;
+}
+
+.konten h1{
+  color: black;
+}
+
+.list h2{
+  color: black;
+}
+
+.card {
+  color: black;
+  margin-left: 30%;
+  margin-right: 30%;
+}
