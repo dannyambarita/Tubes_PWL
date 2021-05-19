@@ -36,3 +36,65 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  color: white;
+}
+
+
+header {
+  background : rgb(42, 30, 150);
+  padding: 13px;
+  font-size: 10px;
+  text-align: left;
+  color: white;
+}
+
+.navbar {
+  float: right;
+  padding-right: 62%;
+}
+
+.sidenav {
+  width : 150px;
+  background : rgb(42, 30, 150);
+  position: absolute;
+  height: 100%;
+  left: -100%;
+  transition: all 1s;
+}
+
+.sidenav.active {
+  left: 0%;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  text-align: left;
+  font-size: 16px;
+  display: block;
+  padding: 10px 25px;
+  border-radius: 5%;
+}
+
+ul li a:hover,
+ul li a.active {
+  background: rgb(201, 201, 240);
+}
+
+header svg {
+  font-size: 30px;
+}
+
