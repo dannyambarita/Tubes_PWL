@@ -12,7 +12,7 @@ export default class App extends Component {
 
     this.state = {
       showNav: false,
-      menus: [],
+      keterangan: [],
     };
   }
 
