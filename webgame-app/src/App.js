@@ -13,12 +13,13 @@ export default class App extends Component {
     this.state = {
       showNav: false,
       keterangan: [],
+      pilihgame : 'Valorant'
     };
   }
 
   componentDidMount() {
     axios
-      .get(API_URL + "konten")
+      .get(API_URL + "artikel?game.nama=" + this.state.pilihgame)
       .then(res => {
         const keterangan = res.data;
         this.setState({ keterangan });
@@ -28,16 +29,33 @@ export default class App extends Component {
       })
   }
 
+  changegame = (value) => {
+    this.setState({
+      pilihgame: value,
+      keterangan: []
+    })
+
+    axios
+      .get(API_URL + "artikel?game.nama=" + value)
+      .then(res => {
+        const keterangan = res.data;
+        this.setState({ keterangan });
+      })
+      .catch(error => {
+        console.log("error lul", error);
+      })
+
+  }
+
   render() {
-    const { keterangan } = this.state;
-    console.log(this.state.keterangan);
+    const { keterangan, pilihgame } = this.state;
     return (
       <div className='App'>
         <navbar><NavbarComponents /></navbar>
         <header>
           <GiHamburgerMenu onClick={() => this.setState({ showNav: !this.state.showNav })} />
         </header>
-        <Sidebar show={this.state.showNav} />
+        <Sidebar show={this.state.showNav} changegame={this.changegame} pilihgame={pilihgame} />
         <div className="mt-3">
           <Konten show={this.state.showNav} />
             {keterangan && keterangan.map((keterangan) => (

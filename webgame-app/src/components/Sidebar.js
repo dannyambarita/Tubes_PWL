@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { API_URL } from '../utils/constant';
 
-    class Sidebar extends Component {
+class Sidebar extends Component {
     constructor(props) {
         super(props)
 
@@ -24,23 +24,23 @@ import { API_URL } from '../utils/constant';
     }
 
     render() {
-        return ({ show }) => {
-            return (
-                <div className={show ? 'sidenav active' : 'sidenav'}>
-                    <ul>
-                        <li>
-                            <a href='#home'>Dota</a>
+        const { game } = this.state
+        const { changegame, pilihgame } = this.props
+        const { show } = this.props;
+        return (
+            <div className={show ? 'sidenav active' : 'sidenav'}>
+                <ul>
+                    {game && game.map((game) => (
+                        <li key={game.id} onClick={()=>changegame(game.nama)}
+                        className={pilihgame === game.nama && "sidebar-fx"}>
+                            <h5>
+                            {game.nama}
+                            </h5>
                         </li>
-                        <li>
-                            <a href='#home'>Counter Strike</a>
-                        </li>
-                        <li>
-                            <a href='#home'>Valorant</a>
-                        </li>
-                    </ul>
-                </div>
-            )
-        }
+                    ))}
+                </ul>
+            </div>
+        )
     }
 }
 
