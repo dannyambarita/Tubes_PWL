@@ -79,7 +79,7 @@ ul li {
   margin: 10px 0;
 }
 
-ul li a {
+ul li h5 {
   color: white;
   text-decoration: none;
   text-align: left;
@@ -89,9 +89,9 @@ ul li a {
   border-radius: 5%;
 }
 
-ul li a:hover,
-ul li a.active {
-  background: rgb(201, 201, 240);
+ul li h5:hover,
+ul li h5.active {
+  background: rgb(57, 57, 136);
 }
 
 header svg {
