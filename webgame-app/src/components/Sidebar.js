@@ -32,7 +32,8 @@ class Sidebar extends Component {
                 <ul>
                     {game && game.map((game) => (
                         <li key={game.id} onClick={()=>changegame(game.nama)}
-                        className={pilihgame === game.nama && "sidebar-fx"}>
+                        className={pilihgame === game.nama && "sidebar-fx"}
+                        style={{cursor: 'pointer'}}>
                             <h5>
                             {game.nama}
                             </h5>

@@ -52,7 +52,7 @@ export default class App extends Component {
     return (
       <div className='App'>
         <navbar><NavbarComponents /></navbar>
-        <header>
+        <header style={{cursor: 'pointer'}}>
           <GiHamburgerMenu onClick={() => this.setState({ showNav: !this.state.showNav })} />
         </header>
         <Sidebar show={this.state.showNav} changegame={this.changegame} pilihgame={pilihgame} />
