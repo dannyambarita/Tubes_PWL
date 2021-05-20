@@ -13,7 +13,7 @@
       "nama": "Valorant"
     }
   ],
-  "konten": [
+  "artikel": [
     {
       "id": 1,
       "kode": "K-01",
@@ -21,7 +21,7 @@
       "deskripsi": "ini paragraf dota",
       "is_ready": true,
       "gambar": "faceless_void.jpg",
-      "category": {
+      "game": {
         "id": 1,
         "nama": "Dota"
       }
@@ -33,7 +33,7 @@
       "deskripsi": "ini paragraf cs",
       "is_ready": true,
       "gambar": "ak_47.jpg",
-      "category": {
+      "game": {
         "id": 2,
         "nama": "Counter-Strike"
       }
@@ -45,7 +45,7 @@
       "deskripsi": "ini paragraf valorant",
       "is_ready": true,
       "gambar": "valorant.jpg",
-      "category": {
+      "game": {
         "id": 3,
         "nama": "Valorant"
       }
