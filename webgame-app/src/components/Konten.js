@@ -1,12 +1,12 @@
-import React from 'react';
- 
-        const Konten = ({show}) => {
+import React, {Component} from 'react';
+
+export default class Konten extends Component {
+    render() {
         return (
-            <div className={show ? 'konten active' : 'konten'}>
-                <h1><strong>Artikel</strong></h1>
-                <hr />
+            <div className="konten-css">
+                <h1>List Artikel</h1>
+                <hr/>
             </div>
         );
-        }
-
-    export default Konten
+    }
+}

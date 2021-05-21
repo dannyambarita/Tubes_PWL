@@ -16,3 +16,23 @@ code {
     monospace;
     color: black;
 }
+
+.signup {
+  color: black;
+}
+
+.signup-page {
+  margin-top: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.login {
+  color: black;
+}
+
+.login-page {
+  margin-top: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+}

@@ -18,9 +18,10 @@
       "id": 1,
       "kode": "K-01",
       "nama": "Faceless Void",
-      "deskripsi": "ini paragraf dota",
+      "desk": "ini paragraf dota",
       "is_ready": true,
       "gambar": "faceless_void.jpg",
+      "deskripsi": "Faceless Void adalah hero agility carry yang mampu mengunci lawannya untuk kemudian dihabisi sendirian atau oleh hero lain. Kemampuannya serta damage yang bisa ia hasilkan di late game membuatnya menjadi salah satu late game atau hard carry yang paling kuat di Dota 2. Hero ini biasanya paling efektif dimainkan sebagai safelane carry. Namun kadang ia juga dimainkan sebagai offlaner karena memiliki kemampuan untuk kabur dari musuh. Meskipun begitu, tugasnya dalam permainan tetap sama, yaitu menghasilkan damage sebanyak mungkin ke lawan tanpa memberikan kesempatan untuk membalas.",
       "game": {
         "id": 1,
         "nama": "Dota"
@@ -30,7 +31,7 @@
       "id": 2,
       "kode": "K-02",
       "nama": "AK-47",
-      "deskripsi": "ini paragraf cs",
+      "desk": "ini paragraf cs",
       "is_ready": true,
       "gambar": "ak_47.jpg",
       "game": {
@@ -42,7 +43,7 @@
       "id": 3,
       "kode": "K-03",
       "nama": "Valorant",
-      "deskripsi": "ini paragraf valorant",
+      "desk": "ini paragraf valorant",
       "is_ready": true,
       "gambar": "valorant.jpg",
       "game": {
@@ -50,86 +51,9 @@
         "nama": "Valorant"
       }
     }
-    
   ],
-  "keranjangs": [
+  "signup": [
     {
-      "jumlah": 1,
-      "total_harga": 10000,
-      "product": {
-        "id": 6,
-        "kode": "K-06",
-        "nama": "Bakso",
-        "harga": 10000,
-        "is_ready": true,
-        "gambar": "bakso.jpg",
-        "category": {
-          "id": 1,
-          "nama": "Makanan"
-        }
-      },
-      "keterangan": "Bakso Kosongan",
-      "id": 1
-    },
-    {
-      "jumlah": 1,
-      "total_harga": 13000,
-      "product": {
-        "id": 5,
-        "kode": "K-05",
-        "nama": "Mie Goreng",
-        "harga": 13000,
-        "is_ready": true,
-        "gambar": "mie-goreng.jpg",
-        "category": {
-          "id": 1,
-          "nama": "Makanan"
-        }
-      },
-      "id": 2
-    }
-  ],
-  "pesanans": [
-    {
-      "total_bayar": 60000,
-      "menus": [
-        {
-          "jumlah": 2,
-          "total_harga": 32000,
-          "product": {
-            "id": 1,
-            "kode": "K-01",
-            "nama": "Sate Ayam",
-            "harga": 16000,
-            "is_ready": true,
-            "gambar": "sate-ayam.jpg",
-            "category": {
-              "id": 1,
-              "nama": "Makanan"
-            }
-          },
-          "keterangan": "Semuanya Pedas",
-          "id": 1
-        },
-        {
-          "jumlah": 2,
-          "total_harga": 28000,
-          "product": {
-            "id": 2,
-            "kode": "K-02",
-            "nama": "Nasi Goreng Telur",
-            "harga": 14000,
-            "is_ready": true,
-            "gambar": "nasi-goreng-telor.jpg",
-            "category": {
-              "id": 1,
-              "nama": "Makanan"
-            }
-          },
-          "id": 3
-        }
-      ],
-      "id": 1
     }
   ]
 }
