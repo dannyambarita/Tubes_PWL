@@ -81,10 +81,10 @@ export default class Signup extends Component {
             text: "sukses",
             icon: "success",
             button: false,
-          })
-        }
-      ).catch(error => {
-          console.log(error);
+          });
+        })
+        .catch(error => {
+          console.error(error.message);
         }
       )
       };

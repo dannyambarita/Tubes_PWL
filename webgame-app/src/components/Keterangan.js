@@ -26,7 +26,8 @@ class Keterangan extends Component {
 
     render() {
         console.log("det : ", this.state.det)
-        const { keterangan} = this.props
+        const { keterangan, detaildesk, pilihdetail } = this.props
+        const { det } = this.state
         return (
             <div className="card">
                 <Col xs={1} className="mb-1">
@@ -37,7 +38,11 @@ class Keterangan extends Component {
                             <Card.Text>
                                 {keterangan.desk}
                             </Card.Text>
-                            <Button variant="primary" >Baca lebih lanjut</Button>
+                            {det && det.map((det) => (
+                            <Button variant="primary" key={det.id} onPress={()=>detaildesk(det.nama)} className={pilihdetail === det.nama}>
+                                Baca lebih lanjut
+                            </Button>
+                            ))}
                         </Card.Body>
                     </Card>
                 </Col>

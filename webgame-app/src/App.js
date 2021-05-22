@@ -1,6 +1,6 @@
-import './App.css'; 
+import './App.css';
 import { Row, Col } from 'react-bootstrap';
-import { Konten, NavbarComponents, Sidebar, Keterangan} from './components'
+import { Konten, NavbarComponents, Sidebar, Keterangan, Detail } from './components'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import React, { Component } from 'react'
 import { API_URL } from './utils/constant';
@@ -15,7 +15,7 @@ export default class App extends Component {
       showNav: false,
       keterangan: [],
       pilihgame: [],
-      detail: []
+      det: []
     };
   }
 
@@ -49,17 +49,17 @@ export default class App extends Component {
 
   }
 
-  detail = (value) => {
+  detaildesk = (value) => {
     this.setState({
       pilihdetail: value,
-      detail: []
+      det: []
     })
 
     axios
       .get(API_URL + "artikel?game.nama=" + value)
       .then(res => {
-        const detail = res.data;
-        this.setState({ detail });
+        const detaildesk = res.data;
+        this.setState({ detaildesk });
       })
       .catch(error => {
         console.log("error lul", error);
@@ -68,7 +68,7 @@ export default class App extends Component {
 
 
   render() {
-    const { keterangan, pilihgame } = this.state;
+    const { keterangan, pilihgame, detaildesk } = this.state;
     return (
       <div className='App'>
         <navbar><NavbarComponents /></navbar>
@@ -83,6 +83,16 @@ export default class App extends Component {
               <Col xs={5} />
               <ListGame />
             </Row>
+            <Col> {detaildesk && this.detaildesk.map((detaildesk)=>(
+              <div>
+              <Detail
+            key={detaildesk.id}
+              detaildesk={detaildesk}
+              detaildesk={this.detaildesk} />
+            </div>
+            ))}
+            asd
+            </Col>
           </div>
           <div className="list-det">
             {keterangan && keterangan.map((keterangan) => (
