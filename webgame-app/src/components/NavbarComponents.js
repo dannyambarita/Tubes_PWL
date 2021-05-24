@@ -12,7 +12,7 @@ export default class NavbarComponents extends Component {
         return (
             <Navbar variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand href="/"><strong>Itera E-sport</strong></Navbar.Brand>
+                    <Navbar.Brand href="/"><strong>ITERA E-sport</strong></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
